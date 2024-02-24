@@ -5,7 +5,7 @@ const backEndServerPort = 4000
 
 app.get('/', (req, res) => {
   // If backend running
-  fetch(`http://localhost:${backEndServerPort}/`).then(
+  fetch(`http://host.docker.internal:${backEndServerPort}/`).then( // host.docker.internal rather than localhost, when a docker service accesses another service via the docker network
     response => {
       const responseTextPromise = response.text();
       responseTextPromise.then(
