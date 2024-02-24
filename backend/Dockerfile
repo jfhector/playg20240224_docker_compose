@@ -1,6 +1,6 @@
 FROM node:21.6.2-alpine3.18
 
-WORKDIR frontend
+WORKDIR backend
 COPY package*.json ./
 RUN npm install
 COPY . ./
@@ -8,4 +8,4 @@ COPY . ./
 CMD ["npm", "start"]
 
 # Expose port
-EXPOSE 3000
+EXPOSE 4000
