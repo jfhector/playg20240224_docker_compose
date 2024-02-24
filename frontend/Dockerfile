@@ -1,13 +1,12 @@
-# Get back image
+FROM node:21.6.2-alpine3.18
 
-# Create user group and user
-# Set user
+WORKDIR frontend
+COPY package*.json ./
+RUN npm --version
+RUN npm install
+COPY . ./
 
-# Change dir?
-# Copy package.json
-# Run npm install
-# Copy all
-
-# Sth to run the app!?
+CMD ["npm", "start"]
 
 # Expose port
+EXPOSE 3000

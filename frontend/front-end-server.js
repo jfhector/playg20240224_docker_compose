@@ -4,6 +4,7 @@ const frontEndServerPort = 3000
 const backEndServerPort = 4000
 
 app.get('/', (req, res) => {
+  // If backend running
   fetch(`http://localhost:${backEndServerPort}/`).then(
     response => {
       const responseTextPromise = response.text();
@@ -12,6 +13,9 @@ app.get('/', (req, res) => {
       )
     }
   );
+
+  // If backend not running
+  res.send("Hello from FE")
 })
 
 app.listen(frontEndServerPort, () => {
