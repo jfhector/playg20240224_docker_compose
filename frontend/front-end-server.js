@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   );
 
   // If backend not running
-  res.send("Hello from FE")
+  // res.send("Hello from FE")
 })
 
 app.listen(frontEndServerPort, () => {
